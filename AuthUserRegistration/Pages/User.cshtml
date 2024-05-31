@@ -1,0 +1,69 @@
+﻿@page
+@model AuthUserRegistration.Pages.UserModel
+@{
+}
+
+<h2 class="text-center">Welcome to your Account...!</h2>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Light grey background */
+            padding: 20px;
+        }
+
+        .user-info {
+            background-color: #fff; /* White background for each user info section */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+            .user-info label {
+                font-weight: bold;
+            }
+
+            .user-info div {
+                margin-top: 5px;
+            }
+
+                .user-info div span {
+                    font-style: italic;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="user-info">
+        <label>First Name:</label>
+        <div>@Model.appUser?.FirstName</div>
+    </div>
+    <div class="user-info">
+        <label>Last Name:</label>
+        <div>@Model.appUser?.LastName</div>
+    </div>
+    <div class="user-info">
+        <label>Email:</label>
+        <div>@Model.appUser?.Email</div>
+    </div>
+    <div class="user-info">
+        <label>Phone:</label>
+        <div>@Model.appUser?.PhoneNumber</div>
+    </div>
+    <div class="user-info">
+        <label>Address:</label>
+        <div>@Model.appUser?.Address</div>
+    </div>
+    <div class="user-info">
+        <label>Created At:</label>
+        <div>@Model.appUser?.CreatedAt.ToString("MM/dd/yyyy")</div>
+    </div>
+
+</body>
+</html>
